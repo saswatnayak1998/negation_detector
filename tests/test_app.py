@@ -1,7 +1,7 @@
 from neg import make_negation
-import json
-with open("data.json") as json_file:
-    json_data = json.load(json_file)
+
 def test_index():
-    truth=json_data.values()
-    assert make_negation==truth
+    truth=[False,False,True]
+    s=make_negation()
+    for i in range(0,len(truth)):
+        assert truth[i]==s[i]
